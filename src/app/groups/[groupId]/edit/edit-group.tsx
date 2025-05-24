@@ -19,7 +19,7 @@ export const EditGroup = () => {
         await mutateAsync({ groupId, participantId, groupFormValues })
         await utils.groups.invalidate()
       }}
-      protectedParticipantIds={data?.participantsWithExpenses}
+      protectedParticipantIds={data?.participantsWithExpenses as string[]}
     />
   )
 }
