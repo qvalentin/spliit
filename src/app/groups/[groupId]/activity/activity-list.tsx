@@ -127,12 +127,12 @@ export function ActivityList() {
             >
               {t(`Groups.${dateGroup}`)}
             </div>
-            {groupActivities.map((activity) => {
+            {groupActivities.map((activity: any) => {
               const participant =
                 activity.participantId !== null
                   ? group.participants.find(
-                      (p) => p.id === activity.participantId,
-                    )
+                    (p: any) => p.id === activity.participantId,
+                  )
                   : undefined
               return (
                 <ActivityItem
